@@ -1,9 +1,9 @@
 <?php
 
-$db_host = 'localhost';
-$db_username = 'root';
-$db_password = '';
-$db_name = 'rfid';
+$db_host = 'sql12.freesqldatabase.com';
+$db_username = 'sql12709243';
+$db_password = 'xeBsVrZQSg';
+$db_name = 'sql12709243';
 
 $conn = mysqli_connect($db_host, $db_username, $db_password, $db_name);
 if (!$conn) {
