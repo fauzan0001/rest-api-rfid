@@ -2,6 +2,7 @@
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET, POST, DELETE, PUT");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
+header('Content-Type: application/json');
 
 require_once "../db.php";
 global $conn;
@@ -46,6 +47,4 @@ if (isset($_GET['id'])) {
     ];
 }
 
-// Set headers dan kirim respons dalam format JSON
-header('Content-Type: application/json');
 echo json_encode($data_akhir);

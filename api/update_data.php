@@ -2,6 +2,7 @@
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET, POST, DELETE, PUT, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
+header('Content-Type: application/json');
 
 require_once "../db.php";
 global $conn;
@@ -31,5 +32,4 @@ if (mysqli_affected_rows($conn) > 0) {
     ];
 }
 
-header('Content-Type: application/json');
 echo json_encode($data_akhir);
